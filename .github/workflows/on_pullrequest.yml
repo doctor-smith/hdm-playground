@@ -22,9 +22,13 @@ jobs:
      #  run: actions/checkout@v3 
      - run: |
          echo 'Test!'
-
+  parallel-test:
+    runs-on: [ ubuntu-latest ]
+    steps:
+      - run: |
+         echo 'Parallel Test!'
   deploy:
-    depends_on: Test
+    needs: Test
     environment: DUMMY
     runs-on: ubuntu-latest
     steps: 
