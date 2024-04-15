@@ -5,6 +5,10 @@ on:
   workflow_dispatch: 
     inputs: 
       target: 
+        description: variable
+        required: false
+        type: string
+        default: My Server
         
   pull_request:
      types:
@@ -37,5 +41,5 @@ jobs:
     steps: 
       - name: step1
         run: |
-          echo "Deploying to"
+          echo "Deploying to {inputs.target}"
              
