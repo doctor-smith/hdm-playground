@@ -1,0 +1,10 @@
+name: My First Action
+description: >
+  Minimal example of an action
+runs:
+  using: composite
+  steps: 
+    - name: Only Step
+      shell: bash
+      run: |
+         echo "Hello from my-first-action"
