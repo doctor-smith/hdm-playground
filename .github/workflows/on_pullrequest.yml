@@ -19,10 +19,10 @@ jobs:
      runs-on: [ ubuntu-latest ]
      steps:
      - name: Checkout
-       run: actions/checkout@v3 
+       uses: actions/checkout@v3 
      
      - name: My Frist Action
-       run: ./github/actions/my-first-action 
+       uses: ./github/actions/my-first-action 
      - run: |
          echo 'Test!'
   parallel-test:
