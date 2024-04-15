@@ -1,0 +1,19 @@
+name: ICLx Check PR
+# garantees runnability and runs tests
+
+on:
+  workflow_dispatch: {}
+  pull_request:
+     types:
+     - opened
+     - synchronize
+     - reopened
+     - closed
+
+jobs:
+  Test:
+     if: ${{ github.event.action != 'closed' || github.event.pull_request.merged == true }}
+     runs-on: [ ubuntu-latest ]
+     steps:
+     - run: |
+         echo 'Test!'
