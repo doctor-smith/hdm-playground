@@ -22,7 +22,7 @@ jobs:
        uses: actions/checkout@v3 
      
      - name: My Frist Action
-       uses: ./github/actions/my-first-action 
+       uses: ././github/actions/my-first-action 
      - run: |
          echo 'Test!'
   parallel-test:
