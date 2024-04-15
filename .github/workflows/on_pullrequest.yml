@@ -1,4 +1,4 @@
-name: ICLx Check PR
+name: Check PR
 # garantees runnability and runs tests
 
 on:
