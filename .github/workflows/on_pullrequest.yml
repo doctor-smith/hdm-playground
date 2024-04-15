@@ -18,8 +18,11 @@ jobs:
      if: ${{ github.event.action != 'closed' || github.event.pull_request.merged == true }}
      runs-on: [ ubuntu-latest ]
      steps:
-     #- name: Checkout
-     #  run: actions/checkout@v3 
+     - name: Checkout
+       run: actions/checkout@v3 
+     
+     - name: My Frist Action
+       run: ./github/actions/my-first-action 
      - run: |
          echo 'Test!'
   parallel-test:
